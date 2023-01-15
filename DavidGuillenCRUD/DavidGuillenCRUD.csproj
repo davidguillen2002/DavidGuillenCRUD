@@ -49,12 +49,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\queso.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="sqlite-net-pcl" Version="1.9.141-beta" />
 	  <PackageReference Include="SQLiteNetExtensions.Async" Version="2.1.0" />
 	  <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.4" />
 	  <PackageReference Include="SQLitePCLRaw.core" Version="2.1.4" />
 	  <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="2.1.4" />
 	  <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\DGBurgerItemPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\DGBurgerListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

@@ -1,4 +1,6 @@
-﻿namespace DavidGuillenCRUD;
+﻿using DavidGuillenCRUD.Views;
+
+namespace DavidGuillenCRUD;
 
 public partial class App : Application
 {
@@ -6,6 +8,9 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+        MainPage = new NavigationPage(new DGBurgerListPage())
+        {
+            BarTextColor = Color.FromRgb(255, 255, 255)
+        };
+    }
 }
