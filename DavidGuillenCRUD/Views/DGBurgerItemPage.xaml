@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DavidGuillenCRUD.Views.DGBurgerItemPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="DGCRUDHamburguesas">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="20"
+            Spacing="10"
+            VerticalOptions="StartAndExpand">
+
+            <Label Text="Nombre:" />
+            <Entry Text="{Binding DGName}" />
+
+            <Label Text="Descripción:" />
+            <Entry Text="{Binding DGDescripcion}" />
+
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    Margin="0,10"
+                    HorizontalOptions="StartAndExpand"
+                    Text="¿Con queso extra?" />
+                <Switch HorizontalOptions="EndAndExpand" IsToggled="{Binding DGWithExtraCheese}" />
+            </StackLayout>
+
+            <Button Clicked="OnSaveClicked" Text="Guardar" />
+
+            <Button Clicked="OnDeleteClicked" Text="Borrar" />
+
+            <Button Clicked="OnCancelClicked" Text="Cancelar" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
