@@ -34,22 +34,22 @@ namespace DavidGuillenCRUD.Data
             Database = new SQLiteAsyncConnection(DGConstants.DatabasePath, DGConstants.Flags);
         }
 
-        public Task<List<DGBurger>> GetItemsAsync()
+        public Task<List<DGBurger>> DGGetItemsAsync()
         {
             return Database.Table<DGBurger>().ToListAsync();
         }
 
-        public Task<List<DGBurger>> GetItemsNotDoneAsync()
+        public Task<List<DGBurger>> DGGetItemsNotDoneAsync()
         {
             return Database.QueryAsync<DGBurger>("SELECT * FROM [TodoItem] WHERE [DGWithExtraCheese] = 0");
         }
 
-        public Task<DGBurger> GetItemAsync(int id)
+        public Task<DGBurger> DGGetItemAsync(int id)
         {
             return Database.Table<DGBurger>().Where(i => i.DGId == id).FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveItemAsync(DGBurger item)
+        public Task<int> DGSaveItemAsync(DGBurger item)
         {
             if (item.DGId != 0)
             {
@@ -61,7 +61,7 @@ namespace DavidGuillenCRUD.Data
             }
         }
 
-        public Task<int> DeleteItemAsync(DGBurger item)
+        public Task<int> DGDeleteItemAsync(DGBurger item)
         {
             return Database.DeleteAsync(item);
         }

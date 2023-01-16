@@ -24,11 +24,11 @@
                 <Switch HorizontalOptions="EndAndExpand" IsToggled="{Binding DGWithExtraCheese}" />
             </StackLayout>
 
-            <Button Clicked="OnSaveClicked" Text="Guardar" />
+            <Button Clicked="DGOnSaveClicked" Text="Guardar" />
 
-            <Button Clicked="OnDeleteClicked" Text="Borrar" />
+            <Button Clicked="DGOnDeleteClicked" Text="Borrar" />
 
-            <Button Clicked="OnCancelClicked" Text="Cancelar" />
+            <Button Clicked="DGOnCancelClicked" Text="Cancelar" />
 
         </StackLayout>
     </ContentPage.Content>

@@ -20,10 +20,10 @@ namespace DavidGuillenCRUD.Views
         {
             base.OnAppearing();
             DGBurgerDatabase database = await DGBurgerDatabase.Instance;
-            listView.ItemsSource = await database.GetItemsAsync();
+            listView.ItemsSource = await database.DGGetItemsAsync();
         }
 
-        async void OnItemAdded(object sender, EventArgs e)
+        async void DGAgregarItem(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new DGBurgerItemPage
             {
@@ -31,7 +31,7 @@ namespace DavidGuillenCRUD.Views
             });
         }
 
-        async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
+        async void DGSeleccionarItem(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)
             {

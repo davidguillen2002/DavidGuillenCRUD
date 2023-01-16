@@ -12,23 +12,23 @@ namespace DavidGuillenCRUD.Views
             InitializeComponent();
         }
 
-        async void OnSaveClicked(object sender, EventArgs e)
+        async void DGOnSaveClicked(object sender, EventArgs e)
         {
             var burgerItem = (DGBurger)BindingContext;
             DGBurgerDatabase database = await DGBurgerDatabase.Instance;
-            await database.SaveItemAsync(burgerItem);
+            await database.DGSaveItemAsync(burgerItem);
             await Navigation.PopAsync();
         }
 
-        async void OnDeleteClicked(object sender, EventArgs e)
+        async void DGOnDeleteClicked(object sender, EventArgs e)
         {
             var burgerItem = (DGBurger)BindingContext;
             DGBurgerDatabase database = await DGBurgerDatabase.Instance;
-            await database.DeleteItemAsync(burgerItem);
+            await database.DGDeleteItemAsync(burgerItem);
             await Navigation.PopAsync();
         }
 
-        async void OnCancelClicked(object sender, EventArgs e)
+        async void DGOnCancelClicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
         }
