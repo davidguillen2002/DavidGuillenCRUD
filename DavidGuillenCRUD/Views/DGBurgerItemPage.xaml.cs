@@ -14,17 +14,17 @@ namespace DavidGuillenCRUD.Views
 
         async void OnSaveClicked(object sender, EventArgs e)
         {
-            var todoItem = (DGBurger)BindingContext;
+            var burgerItem = (DGBurger)BindingContext;
             DGBurgerDatabase database = await DGBurgerDatabase.Instance;
-            await database.SaveItemAsync(todoItem);
+            await database.SaveItemAsync(burgerItem);
             await Navigation.PopAsync();
         }
 
         async void OnDeleteClicked(object sender, EventArgs e)
         {
-            var todoItem = (DGBurger)BindingContext;
+            var burgerItem = (DGBurger)BindingContext;
             DGBurgerDatabase database = await DGBurgerDatabase.Instance;
-            await database.DeleteItemAsync(todoItem);
+            await database.DeleteItemAsync(burgerItem);
             await Navigation.PopAsync();
         }
 
