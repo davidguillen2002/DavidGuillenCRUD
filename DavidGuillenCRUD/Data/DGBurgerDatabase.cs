@@ -41,7 +41,7 @@ namespace DavidGuillenCRUD.Data
 
         public Task<List<DGBurger>> DGGetItemsNotDoneAsync()
         {
-            return Database.QueryAsync<DGBurger>("SELECT * FROM [TodoItem] WHERE [DGWithExtraCheese] = 0");
+            return Database.QueryAsync<DGBurger>("SELECT * FROM [DGBurger] WHERE [DGWithExtraCheese] = 0");
         }
 
         public Task<DGBurger> DGGetItemAsync(int id)
